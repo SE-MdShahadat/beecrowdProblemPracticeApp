@@ -19,7 +19,7 @@ namespace beecrowdPracticeApp
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                GameTimewithMinutes_1047();
+                SalaryIncrease_1048();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
@@ -217,6 +217,48 @@ namespace beecrowdPracticeApp
                 Console.ReadLine();
 
             }
+            void SalaryIncrease_1048()
+            {
+                double salary =Convert.ToDouble(Console.ReadLine());
+                double increment = 0.00;
+                int percentage=0;
+                if(salary >= 0.00 && salary <= 400.00)
+                {
+                    percentage = 15;
+                    increment = salary * percentage /100;
+                    salary= salary+increment;
+                } 
+                else if (salary >= 400.01 && salary <= 800.00)
+                {
+                    percentage = 12;
+                    increment = salary * percentage / 100;
+                    salary = salary + increment;
+                }
+                else if (salary >= 800.01 && salary <= 1200.00)
+                {
+                    percentage = 10;
+                    increment = salary * percentage / 100;
+                    salary = salary + increment;
+                }
+                else if (salary >= 1200.01 && salary <= 2000.00)
+                {
+                    percentage = 7;
+                    increment = salary * percentage / 100;
+                    salary = salary + increment;
+                }
+                else if (salary >2000)
+                {
+                    percentage = 4;
+                    increment = salary * percentage / 100;
+                    salary = salary + increment;
+                }
+
+                Console.WriteLine($"Novo salario: {salary.ToString("0.00")}");
+                Console.WriteLine($"Reajuste ganho: {increment.ToString("0.00")}");
+                Console.WriteLine($"Em percentual: {percentage} %");
+                Console.ReadKey();
+            }
+
         }
     }
 }
