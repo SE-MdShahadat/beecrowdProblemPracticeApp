@@ -19,3 +19,10 @@ C:\Users\AZG_ERP_00\Desktop\New folder (2)\beecrowdProblemPracticeApp\obj\Debug\
 C:\Users\AZG_ERP_00\Desktop\New folder (2)\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.csproj.CoreCompileInputs.cache
 C:\Users\AZG_ERP_00\Desktop\New folder (2)\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.exe
 C:\Users\AZG_ERP_00\Desktop\New folder (2)\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.pdb
+C:\Users\AZG_ERP_00\Desktop\beecrowdProblemPracticeApp\bin\Debug\beecrowdPracticeApp.exe.config
+C:\Users\AZG_ERP_00\Desktop\beecrowdProblemPracticeApp\bin\Debug\beecrowdPracticeApp.exe
+C:\Users\AZG_ERP_00\Desktop\beecrowdProblemPracticeApp\bin\Debug\beecrowdPracticeApp.pdb
+C:\Users\AZG_ERP_00\Desktop\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.csproj.AssemblyReference.cache
+C:\Users\AZG_ERP_00\Desktop\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.csproj.CoreCompileInputs.cache
+C:\Users\AZG_ERP_00\Desktop\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.exe
+C:\Users\AZG_ERP_00\Desktop\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.pdb

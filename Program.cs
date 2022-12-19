@@ -5,6 +5,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace beecrowdPracticeApp
 {
@@ -18,7 +19,7 @@ namespace beecrowdPracticeApp
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                GameTime_1046();
+                GameTimewithMinutes_1047();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
@@ -144,6 +145,26 @@ namespace beecrowdPracticeApp
                 }
                 Console.WriteLine($"O JOGO DUROU {gameDuration} HORA(S)");
                 //Console.ReadKey();
+            }
+            void GameTimewithMinutes_1047()
+            {
+                string[] inputs = Console.ReadLine().ToString().Split(' ');
+                int startTimeInMinutes = (int.Parse(inputs[0])*60) + int.Parse(inputs[1]);
+                int endTimeInMinutes = (int.Parse(inputs[2]) * 60) + int.Parse(inputs[3]);
+                int gameDurationInMinutes = endTimeInMinutes - startTimeInMinutes;
+                if(gameDurationInMinutes > 0)
+                {
+                    Console.WriteLine($"O JOGO DUROU {gameDurationInMinutes / 60} HORA(S) E {gameDurationInMinutes % 60} MINUTO(S)");
+
+                }
+                else
+                {
+                    Console.WriteLine($"O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)");
+
+                }
+
+                //Console.ReadKey();
+
             }
         }
     }
