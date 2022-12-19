@@ -130,7 +130,20 @@ namespace beecrowdPracticeApp
             }
             void GameTime_1046()
             {
-                Console.WriteLine("Hi");
+                string[] inputs =Console.ReadLine().ToString().Split(' ');
+                int startHour = int.Parse(inputs[0]);
+                int endHour = int.Parse(inputs[1]);
+                int gameDuration = 0;
+                if (startHour >= endHour)
+                {
+                    gameDuration = ((24 - startHour) + endHour);
+                }
+                else if(startHour < endHour)
+                {
+                    gameDuration =  endHour -startHour;
+                }
+                Console.WriteLine($"O JOGO DUROU {gameDuration} HORA(S)");
+                //Console.ReadKey();
             }
         }
     }
