@@ -5,3 +5,10 @@ F:\Learn Things\beecrowd Practice\beecrowdPracticeApp\obj\Debug\beecrowdPractice
 F:\Learn Things\beecrowd Practice\beecrowdPracticeApp\obj\Debug\beecrowdPracticeApp.csproj.CoreCompileInputs.cache
 F:\Learn Things\beecrowd Practice\beecrowdPracticeApp\obj\Debug\beecrowdPracticeApp.exe
 F:\Learn Things\beecrowd Practice\beecrowdPracticeApp\obj\Debug\beecrowdPracticeApp.pdb
+F:\Learn Things\beecrowd Practice\beecrowdProblemPracticeApp\bin\Debug\beecrowdPracticeApp.exe.config
+F:\Learn Things\beecrowd Practice\beecrowdProblemPracticeApp\bin\Debug\beecrowdPracticeApp.exe
+F:\Learn Things\beecrowd Practice\beecrowdProblemPracticeApp\bin\Debug\beecrowdPracticeApp.pdb
+F:\Learn Things\beecrowd Practice\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.csproj.AssemblyReference.cache
+F:\Learn Things\beecrowd Practice\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.csproj.CoreCompileInputs.cache
+F:\Learn Things\beecrowd Practice\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.exe
+F:\Learn Things\beecrowd Practice\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.pdb

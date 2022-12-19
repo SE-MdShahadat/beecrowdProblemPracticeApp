@@ -18,7 +18,7 @@ namespace beecrowdPracticeApp
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                Triangle_Types_1045();
+                GameTime_1046();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
@@ -127,6 +127,10 @@ namespace beecrowdPracticeApp
                 if (A == B || B == C || C == A) Console.WriteLine("TRIANGULO ISOSCELES");
                 Console.ReadLine();
 
+            }
+            void GameTime_1046()
+            {
+                Console.WriteLine("Hi");
             }
         }
     }
