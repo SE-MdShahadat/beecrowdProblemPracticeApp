@@ -178,7 +178,7 @@ namespace beecrowdPracticeApp
                 string[] inputText = Console.ReadLine().Split(new char[] { });
                 int x = int.Parse(inputText[0]);
                 int y = int.Parse(inputText[1]);
-                double price = 0.00;
+                //double price = 0.00;
                 if (x == 1) Console.WriteLine("Total: R$ " + (4.00 * y).ToString("0.00"));
                 if (x == 2) Console.WriteLine("Total: R$ " + (4.50 * y).ToString("0.00"));
                 if (x == 3) Console.WriteLine("Total: R$ " + (5.00 * y).ToString("0.00"));
@@ -226,31 +226,31 @@ namespace beecrowdPracticeApp
                 {
                     percentage = 15;
                     increment = salary * percentage /100;
-                    salary= salary+increment;
+                    salary= (double)salary +increment;
                 } 
                 else if (salary >= 400.01 && salary <= 800.00)
                 {
                     percentage = 12;
                     increment = salary * percentage / 100;
-                    salary = salary + increment;
+                    salary = (double)salary + increment;
                 }
                 else if (salary >= 800.01 && salary <= 1200.00)
                 {
                     percentage = 10;
                     increment = salary * percentage / 100;
-                    salary = salary + increment;
+                    salary = (double)salary + increment;
                 }
                 else if (salary >= 1200.01 && salary <= 2000.00)
                 {
                     percentage = 7;
                     increment = salary * percentage / 100;
-                    salary = salary + increment;
+                    salary = (double)salary + increment;
                 }
                 else if (salary >2000)
                 {
                     percentage = 4;
                     increment = salary * percentage / 100;
-                    salary = salary + increment;
+                    salary = (double)(salary + increment);
                 }
 
                 Console.WriteLine($"Novo salario: {salary.ToString("0.00")}");
