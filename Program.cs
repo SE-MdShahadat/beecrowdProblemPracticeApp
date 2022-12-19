@@ -173,6 +173,50 @@ namespace beecrowdPracticeApp
                 Console.ReadKey();
 
             }
+            void Snack_1038()
+            {
+                string[] inputText = Console.ReadLine().Split(new char[] { });
+                int x = int.Parse(inputText[0]);
+                int y = int.Parse(inputText[1]);
+                double price = 0.00;
+                if (x == 1) Console.WriteLine("Total: R$ " + (4.00 * y).ToString("0.00"));
+                if (x == 2) Console.WriteLine("Total: R$ " + (4.50 * y).ToString("0.00"));
+                if (x == 3) Console.WriteLine("Total: R$ " + (5.00 * y).ToString("0.00"));
+                if (x == 4) Console.WriteLine("Total: R$ " + (2.00 * y).ToString("0.00"));
+                if (x == 5) Console.WriteLine("Total: R$ " + (1.50 * y).ToString("0.00"));
+                //Console.ReadLine();
+            }
+            void Multiples_1044()
+            {
+                string[] inputText1 = Console.ReadLine().Split(new char[] { });
+                int n1 = int.Parse(inputText1[0]);
+                int n2 = int.Parse(inputText1[1]);
+                if (n1 > n2)
+                {
+                    if (n1 % n2 == 0)
+                    {
+                        Console.WriteLine("Sao Multiplos");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nao sao Multiplos");
+                    }
+                }
+                else
+                {
+                    if (n2 % n1 == 0)
+                    {
+                        Console.WriteLine("Sao Multiplos");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nao sao Multiplos");
+                    }
+                }
+
+                Console.ReadLine();
+
+            }
         }
     }
 }
