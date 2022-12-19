@@ -26,3 +26,10 @@ C:\Users\AZG_ERP_00\Desktop\beecrowdProblemPracticeApp\obj\Debug\beecrowdPractic
 C:\Users\AZG_ERP_00\Desktop\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.csproj.CoreCompileInputs.cache
 C:\Users\AZG_ERP_00\Desktop\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.exe
 C:\Users\AZG_ERP_00\Desktop\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.pdb
+C:\Users\Shahadat\Desktop\GitHub\beecrowdProblemPracticeApp\bin\Debug\beecrowdPracticeApp.exe.config
+C:\Users\Shahadat\Desktop\GitHub\beecrowdProblemPracticeApp\bin\Debug\beecrowdPracticeApp.exe
+C:\Users\Shahadat\Desktop\GitHub\beecrowdProblemPracticeApp\bin\Debug\beecrowdPracticeApp.pdb
+C:\Users\Shahadat\Desktop\GitHub\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.csproj.AssemblyReference.cache
+C:\Users\Shahadat\Desktop\GitHub\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.csproj.CoreCompileInputs.cache
+C:\Users\Shahadat\Desktop\GitHub\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.exe
+C:\Users\Shahadat\Desktop\GitHub\beecrowdProblemPracticeApp\obj\Debug\beecrowdPracticeApp.pdb

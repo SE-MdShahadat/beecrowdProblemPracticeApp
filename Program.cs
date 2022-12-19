@@ -148,22 +148,29 @@ namespace beecrowdPracticeApp
             }
             void GameTimewithMinutes_1047()
             {
+                
                 string[] inputs = Console.ReadLine().ToString().Split(' ');
-                int startTimeInMinutes = (int.Parse(inputs[0])*60) + int.Parse(inputs[1]);
-                int endTimeInMinutes = (int.Parse(inputs[2]) * 60) + int.Parse(inputs[3]);
-                int gameDurationInMinutes = endTimeInMinutes - startTimeInMinutes;
-                if(gameDurationInMinutes > 0)
-                {
-                    Console.WriteLine($"O JOGO DUROU {gameDurationInMinutes / 60} HORA(S) E {gameDurationInMinutes % 60} MINUTO(S)");
+                int initialHour, initialMinute, finalHour, finalMinute, gameDurationInMinutes;
+                initialHour= int.Parse(inputs[0]);
+                initialMinute= int.Parse(inputs[1]);
+                finalHour= int.Parse(inputs[2]);
+                finalMinute= int.Parse(inputs[3]);
 
-                }
-                else
+                if(initialHour == initialMinute && finalHour == finalMinute && initialMinute == finalMinute)
                 {
                     Console.WriteLine($"O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)");
-
                 }
-
-                //Console.ReadKey();
+                else if(initialHour > finalHour) // when duration till next day
+                {
+                    gameDurationInMinutes = (finalHour * 60) +((24-initialHour) * 60) + (finalMinute-initialMinute);
+                    Console.WriteLine($"O JOGO DUROU {gameDurationInMinutes / 60} HORA(S) E {gameDurationInMinutes % 60} MINUTO(S)");
+                }
+                else if(initialHour < finalHour) // when duration in present day
+                {
+                    gameDurationInMinutes = ((finalHour-initialHour)*60)  + (finalMinute - initialMinute);
+                    Console.WriteLine($"O JOGO DUROU {gameDurationInMinutes / 60} HORA(S) E {gameDurationInMinutes % 60} MINUTO(S)");
+                }
+                Console.ReadKey();
 
             }
         }
