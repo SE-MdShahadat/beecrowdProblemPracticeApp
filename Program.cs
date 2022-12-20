@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Policy;
@@ -19,7 +20,7 @@ namespace beecrowdPracticeApp
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                Animal_1049();
+                DDD_1050();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
@@ -315,6 +316,34 @@ namespace beecrowdPracticeApp
 
                 }
                 Console.ReadKey();
+            }
+            void DDD_1050()
+            {
+                Dictionary<int, string> addressBook = new Dictionary<int, string>()
+                {   
+                    { 61, "Brasilia" },
+                    { 71, "Salvador" },
+                    { 11, "Sao Paulo" },
+                    { 21, "Rio de Janeiro" },
+                    { 32, "Juiz de Fora" },
+                    { 19, "Campinas" },
+                    { 27, "Victoria" },
+                    { 31, "Belo Horizonte" },
+
+                };
+                int DDD = int.Parse(Console.ReadLine());
+                int inList = 0;
+                foreach (var item in addressBook)
+                {
+                    if (DDD == item.Key)
+                    {
+                        Console.WriteLine(item.Value);
+                        inList++;
+                    }
+                }
+                if (inList == 0) Console.WriteLine("DDD nao cadastrado");
+                //Console.ReadKey();
+                
             }
 
         }
