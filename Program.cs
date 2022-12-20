@@ -20,7 +20,7 @@ namespace beecrowdPracticeApp
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                PositiveNumbers_1060();
+                EventTime_1061();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
@@ -407,7 +407,33 @@ namespace beecrowdPracticeApp
                 Console.WriteLine($"{positiveCount} valores positivos");
                 //Console.ReadLine();
             }
+            void EventTime_1061()
+            {
+                int sd, ed, W, X, Y, Z;
+                Console.Write("Dia ");
+                sd = Convert.ToInt32(Console.ReadLine());
+                string[] startTime = Console.ReadLine().Split(':');
+                int sh = Convert.ToInt32(startTime[0]);
+                int sm = Convert.ToInt32(startTime[1]);
+                int ss = Convert.ToInt32(startTime[2]);
 
+                Console.Write("Dia ");
+                ed = Convert.ToInt32(Console.ReadLine());
+                string[] endTime = Console.ReadLine().Split(':');
+                int eh = Convert.ToInt32(endTime[0]);
+                int em = Convert.ToInt32(endTime[1]);
+                int es = Convert.ToInt32(endTime[2]);
+
+                DateTime startDateTime = new DateTime(1111,4,sd,sh,sm,ss);
+                DateTime endDateTime = new DateTime(1111, 4, ed,eh,em,es);
+                TimeSpan timeSpan = new TimeSpan(0,0,0,0);
+                timeSpan = endDateTime - startDateTime;
+                Console.WriteLine($"{timeSpan.Days} dia(s)");
+                Console.WriteLine($"{timeSpan.Hours} hora(s)");
+                Console.WriteLine($"{timeSpan.Minutes} minuto(s)");
+                Console.WriteLine($"{timeSpan.Seconds} segundo(s)");
+                //Console.ReadLine();
+            }
         }
     }
 }
