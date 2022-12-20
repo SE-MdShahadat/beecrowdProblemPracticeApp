@@ -14,18 +14,18 @@ namespace beecrowdPracticeApp
     {
         static void Main(string[] args)
         {
-            
+
             ConsoleKey input = new ConsoleKey();
             do
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                Taxes_1051();
+                Month_1052();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
                 Console.Write("\n");
-            } while (input!=ConsoleKey.E);
+            } while (input != ConsoleKey.E);
 
             void Average3_1040()
             {
@@ -61,7 +61,7 @@ namespace beecrowdPracticeApp
                 double x = double.Parse(inputNumber[0]);
                 double y = double.Parse(inputNumber[1]);
                 if (x == 0.0 && y == 0.0) Console.WriteLine("Origem");
-                if(x==0.0 || y == 0.0)
+                if (x == 0.0 || y == 0.0)
                 {
                     if (x > 0.0 || x < 0.0 && y == 0.0) Console.WriteLine("Eixo X");
                     if (x == 0.0 && y > 0.0 || y < 0.0) Console.WriteLine("Eixo Y");
@@ -98,7 +98,7 @@ namespace beecrowdPracticeApp
             {
                 string inputString = Console.ReadLine();
                 string[] inputNumber = inputString.Split(' ');
-                double [] numbers = new double[inputNumber.Length];
+                double[] numbers = new double[inputNumber.Length];
                 for (int j = 0; j < numbers.Length; j++)
                 {
                     numbers[j] = double.Parse(inputNumber[j]);
@@ -118,11 +118,12 @@ namespace beecrowdPracticeApp
                 {
                     Console.WriteLine("NAO FORMA TRIANGULO");
                     return;
-                }; 
+                };
                 if ((A * A) == ((B * B) + (C * C))) Console.WriteLine("TRIANGULO RETANGULO");
                 if ((A * A) > ((B * B) + (C * C))) Console.WriteLine("TRIANGULO OBTUSANGULO");
                 if ((A * A) < ((B * B) + (C * C))) Console.WriteLine("TRIANGULO ACUTANGULO");
-                if (A == B && B == C) {
+                if (A == B && B == C)
+                {
                     Console.WriteLine("TRIANGULO EQUILATERO");
                     return;
                 };
@@ -132,7 +133,7 @@ namespace beecrowdPracticeApp
             }
             void GameTime_1046()
             {
-                string[] inputs =Console.ReadLine().ToString().Split(' ');
+                string[] inputs = Console.ReadLine().ToString().Split(' ');
                 int startHour = int.Parse(inputs[0]);
                 int endHour = int.Parse(inputs[1]);
                 int gameDuration = 0;
@@ -140,35 +141,35 @@ namespace beecrowdPracticeApp
                 {
                     gameDuration = ((24 - startHour) + endHour);
                 }
-                else if(startHour < endHour)
+                else if (startHour < endHour)
                 {
-                    gameDuration =  endHour -startHour;
+                    gameDuration = endHour - startHour;
                 }
                 Console.WriteLine($"O JOGO DUROU {gameDuration} HORA(S)");
                 //Console.ReadKey();
             }
             void GameTimewithMinutes_1047()
             {
-                
+
                 string[] inputs = Console.ReadLine().ToString().Split(' ');
                 int initialHour, initialMinute, finalHour, finalMinute, gameDurationInMinutes;
-                initialHour= int.Parse(inputs[0]);
-                initialMinute= int.Parse(inputs[1]);
-                finalHour= int.Parse(inputs[2]);
-                finalMinute= int.Parse(inputs[3]);
+                initialHour = int.Parse(inputs[0]);
+                initialMinute = int.Parse(inputs[1]);
+                finalHour = int.Parse(inputs[2]);
+                finalMinute = int.Parse(inputs[3]);
 
-                if(initialHour == initialMinute && finalHour == finalMinute && initialMinute == finalMinute)
+                if (initialHour == initialMinute && finalHour == finalMinute && initialMinute == finalMinute)
                 {
                     Console.WriteLine($"O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)");
                 }
-                else if(initialHour > finalHour) // when duration till next day
+                else if (initialHour > finalHour) // when duration till next day
                 {
-                    gameDurationInMinutes = (finalHour * 60) +((24-initialHour) * 60) + (finalMinute-initialMinute);
+                    gameDurationInMinutes = (finalHour * 60) + ((24 - initialHour) * 60) + (finalMinute - initialMinute);
                     Console.WriteLine($"O JOGO DUROU {gameDurationInMinutes / 60} HORA(S) E {gameDurationInMinutes % 60} MINUTO(S)");
                 }
-                else if(initialHour < finalHour) // when duration in present day
+                else if (initialHour < finalHour) // when duration in present day
                 {
-                    gameDurationInMinutes = ((finalHour-initialHour)*60)  + (finalMinute - initialMinute);
+                    gameDurationInMinutes = ((finalHour - initialHour) * 60) + (finalMinute - initialMinute);
                     Console.WriteLine($"O JOGO DUROU {gameDurationInMinutes / 60} HORA(S) E {gameDurationInMinutes % 60} MINUTO(S)");
                 }
                 Console.ReadKey();
@@ -220,15 +221,15 @@ namespace beecrowdPracticeApp
             }
             void SalaryIncrease_1048()
             {
-                double salary =Convert.ToDouble(Console.ReadLine());
+                double salary = Convert.ToDouble(Console.ReadLine());
                 double increment = 0.00;
-                int percentage=0;
-                if(salary >= 0.00 && salary <= 400.00)
+                int percentage = 0;
+                if (salary >= 0.00 && salary <= 400.00)
                 {
                     percentage = 15;
-                    increment = salary * percentage /100;
-                    salary= (double)salary +increment;
-                } 
+                    increment = salary * percentage / 100;
+                    salary = (double)salary + increment;
+                }
                 else if (salary >= 400.01 && salary <= 800.00)
                 {
                     percentage = 12;
@@ -247,7 +248,7 @@ namespace beecrowdPracticeApp
                     increment = salary * percentage / 100;
                     salary = (double)salary + increment;
                 }
-                else if (salary >2000)
+                else if (salary > 2000)
                 {
                     percentage = 4;
                     increment = salary * percentage / 100;
@@ -289,7 +290,7 @@ namespace beecrowdPracticeApp
                         }
                     }
                 }
-                else if(input1 == "invertebrado")
+                else if (input1 == "invertebrado")
                 {
                     if (input2 == "inseto")
                     {
@@ -320,7 +321,7 @@ namespace beecrowdPracticeApp
             void DDD_1050()
             {
                 Dictionary<int, string> addressBook = new Dictionary<int, string>()
-                {   
+                {
                     { 61, "Brasilia" },
                     { 71, "Salvador" },
                     { 11, "Sao Paulo" },
@@ -343,7 +344,7 @@ namespace beecrowdPracticeApp
                 }
                 if (inList == 0) Console.WriteLine("DDD nao cadastrado");
                 //Console.ReadKey();
-                
+
             }
             void Taxes_1051()
             {
@@ -358,7 +359,7 @@ namespace beecrowdPracticeApp
                 else if (salary >= 2000.01 && salary <= 3000.00)
                 {
                     percentage = 0.08;
-                    taxAmount = (salary-2000) * percentage;
+                    taxAmount = (salary - 2000) * percentage;
                 }
                 else if (salary >= 3000.01 && salary <= 4500.00)
                 {
@@ -374,6 +375,14 @@ namespace beecrowdPracticeApp
                     taxAmount = taxAmount + (salary - 4500) * percentage;
                 }
                 Console.WriteLine($"R$ {taxAmount.ToString("0.00")}");
+                //Console.ReadKey();
+            }
+
+            void Month_1052()
+            {
+                int monthNumber = Convert.ToInt32(Console.ReadLine());
+                DateTime date= new DateTime(1111,monthNumber,1);
+                Console.WriteLine(date.ToString("MMMM"));
                 //Console.ReadKey();
             }
 
