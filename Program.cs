@@ -20,7 +20,7 @@ namespace beecrowdPracticeApp
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                Month_1052();
+                EvenNumbers_1059();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
@@ -377,13 +377,20 @@ namespace beecrowdPracticeApp
                 Console.WriteLine($"R$ {taxAmount.ToString("0.00")}");
                 //Console.ReadKey();
             }
-
             void Month_1052()
             {
                 int monthNumber = Convert.ToInt32(Console.ReadLine());
                 DateTime date= new DateTime(1111,monthNumber,1);
                 Console.WriteLine(date.ToString("MMMM"));
                 //Console.ReadKey();
+            }
+            void EvenNumbers_1059()
+            {
+                for (int i = 1; i <= 100; i++)
+                {
+                    if (i % 2 == 0)
+                        Console.WriteLine(i);
+                }
             }
 
         }
