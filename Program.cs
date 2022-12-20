@@ -21,7 +21,7 @@ namespace beecrowdPracticeApp
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                PositiveAndAverage_1064();
+                EvenOddPositiveAndNegative_1066();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
@@ -381,7 +381,7 @@ namespace beecrowdPracticeApp
             void Month_1052()
             {
                 int monthNumber = Convert.ToInt32(Console.ReadLine());
-                DateTime date= new DateTime(1111,monthNumber,1);
+                DateTime date = new DateTime(1111, monthNumber, 1);
                 Console.WriteLine(date.ToString("MMMM"));
                 //Console.ReadKey();
             }
@@ -396,14 +396,14 @@ namespace beecrowdPracticeApp
             }
             void PositiveNumbers_1060()
             {
-                int inputCount = 0, positiveCount=0;
+                int inputCount = 0, positiveCount = 0;
                 List<double> inputs = new List<double>();
-                while(inputCount < 6)
+                while (inputCount < 6)
                 {
                     double inputNumber = double.Parse(Console.ReadLine());
                     inputs.Add(inputNumber);
                     inputCount++;
-                    if (inputNumber >=0) positiveCount++;
+                    if (inputNumber >= 0) positiveCount++;
                 }
                 Console.WriteLine($"{positiveCount} valores positivos");
                 //Console.ReadLine();
@@ -413,7 +413,7 @@ namespace beecrowdPracticeApp
                 int sd, ed;
                 Console.Write("Dia ");
                 sd = Convert.ToInt32(Console.ReadLine());
-                string[] startTime = Console.ReadLine().Trim(). Split(':');
+                string[] startTime = Console.ReadLine().Trim().Split(':');
                 int sh = Convert.ToInt32(startTime[0]);
                 int sm = Convert.ToInt32(startTime[1]);
                 int ss = Convert.ToInt32(startTime[2]);
@@ -438,7 +438,7 @@ namespace beecrowdPracticeApp
             void PositiveAndAverage_1064()
             {
                 int inputCount = 0, positiveCount = 0;
-                double sum =0.00;
+                double sum = 0.00;
                 List<double> inputs = new List<double>();
                 while (inputCount < 6)
                 {
@@ -451,7 +451,38 @@ namespace beecrowdPracticeApp
                         sum += inputNumber;
                     }
                 }
-                Console.WriteLine($"{positiveCount} valores positivos\n{(sum/positiveCount).ToString("0.0")}");
+                Console.WriteLine($"{positiveCount} valores positivos\n{(sum / positiveCount).ToString("0.0")}");
+                //Console.ReadLine();
+            }
+            void EvenBetweenfiveNumbers_1065()
+            {
+                int inputCount = 0, evenCount = 0;
+                while (inputCount < 5)
+                {
+                    int number = Convert.ToInt32(Console.ReadLine());
+                    inputCount++;
+                    if (number % 2 == 0) evenCount++;
+                }
+                Console.WriteLine($"{evenCount} valores pares");
+                //Console.ReadLine();
+            }
+            void EvenOddPositiveAndNegative_1066()
+            {
+                int inputCount = 0, evenCount = 0, oddCount=0, posCount=0, negCount=0;
+                while (inputCount < 5)
+                {
+                    int number = Convert.ToInt32(Console.ReadLine());
+                    
+                    if (number % 2 == 0) evenCount++;
+                    if (number % 2 !=  0) oddCount++;
+                    if (number  > 0) posCount++;
+                    if (number < 0) negCount++;
+                    inputCount++;
+                }
+                Console.WriteLine($"{evenCount} valor(es) par(es)");
+                Console.WriteLine($"{oddCount} valor(es) impar(es)");
+                Console.WriteLine($"{posCount} valor(es) positivo(s)");
+                Console.WriteLine($"{negCount} valor(es) negativo(s)");
                 //Console.ReadLine();
             }
         }
