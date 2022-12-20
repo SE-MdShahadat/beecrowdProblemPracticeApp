@@ -527,20 +527,41 @@ namespace beecrowdPracticeApp
                 Console.WriteLine(sum);
                 Console.ReadLine();
             }
+            void EvenSquare_1073()
+            {
+                int n = Convert.ToInt32(Console.ReadLine());
+                if (n >= 5 && n <= 2000)
+                {
+                    for (int i = 1; i <= n; i++)
+                    {
+                        if (i % 2 == 0)
+                        {
+                            Console.WriteLine($"{i}^2 = {i * i}");
+                        }
+                    }
+                }
+                Console.ReadLine();
+            }
+
+            //loop Start
             ConsoleKey input = new ConsoleKey();
             do
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                SumofConsecutiveOddNumbersI_1071();
+                EvenSquare_1073();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
                 Console.Write("\n");
             } while (input != ConsoleKey.E);
+            //loop end
 
             
-            
+
+
+
+
         }
     }
 }
