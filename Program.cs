@@ -20,7 +20,7 @@ namespace beecrowdPracticeApp
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                DDD_1050();
+                Taxes_1051();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
@@ -327,7 +327,7 @@ namespace beecrowdPracticeApp
                     { 21, "Rio de Janeiro" },
                     { 32, "Juiz de Fora" },
                     { 19, "Campinas" },
-                    { 27, "Victoria" },
+                    { 27, "Vitoria" },
                     { 31, "Belo Horizonte" },
 
                 };
@@ -344,6 +344,37 @@ namespace beecrowdPracticeApp
                 if (inList == 0) Console.WriteLine("DDD nao cadastrado");
                 //Console.ReadKey();
                 
+            }
+            void Taxes_1051()
+            {
+                double salary = Convert.ToDouble(Console.ReadLine());
+                double taxAmount = 0.00;
+                double percentage = 0.00;
+                if (salary >= 0.00 && salary <= 2000.00)
+                {
+                    Console.WriteLine("Isento");
+                    return;
+                }
+                else if (salary >= 2000.01 && salary <= 3000.00)
+                {
+                    percentage = 0.08;
+                    taxAmount = (salary-2000) * percentage;
+                }
+                else if (salary >= 3000.01 && salary <= 4500.00)
+                {
+                    percentage = 0.18;
+                    taxAmount = 1000 * 0.08;
+                    taxAmount = taxAmount + (salary - 3000) * percentage;
+                }
+                else if (salary > 4500)
+                {
+                    percentage = 0.28;
+                    taxAmount = 1000 * 0.08;
+                    taxAmount = taxAmount + 1500 * 0.18;
+                    taxAmount = taxAmount + (salary - 4500) * percentage;
+                }
+                Console.WriteLine($"R$ {taxAmount.ToString("0.00")}");
+                //Console.ReadKey();
             }
 
         }
