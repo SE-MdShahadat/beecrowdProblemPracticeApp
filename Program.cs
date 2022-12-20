@@ -20,7 +20,7 @@ namespace beecrowdPracticeApp
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                EvenNumbers_1059();
+                PositiveNumbers_1060();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
@@ -391,6 +391,21 @@ namespace beecrowdPracticeApp
                     if (i % 2 == 0)
                         Console.WriteLine(i);
                 }
+                //Console.ReadKey();
+            }
+            void PositiveNumbers_1060()
+            {
+                int inputCount = 0, positiveCount=0;
+                List<double> inputs = new List<double>();
+                while(inputCount < 6)
+                {
+                    double inputNumber = double.Parse(Console.ReadLine());
+                    inputs.Add(inputNumber);
+                    inputCount++;
+                    if (inputNumber >=0) positiveCount++;
+                }
+                Console.WriteLine($"{positiveCount} valores positivos");
+                //Console.ReadLine();
             }
 
         }
