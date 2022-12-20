@@ -468,14 +468,14 @@ namespace beecrowdPracticeApp
             }
             void EvenOddPositiveAndNegative_1066()
             {
-                int inputCount = 0, evenCount = 0, oddCount=0, posCount=0, negCount=0;
+                int inputCount = 0, evenCount = 0, oddCount = 0, posCount = 0, negCount = 0;
                 while (inputCount < 5)
                 {
                     int number = Convert.ToInt32(Console.ReadLine());
-                    
+
                     if (number % 2 == 0) evenCount++;
-                    if (number % 2 !=  0) oddCount++;
-                    if (number  > 0) posCount++;
+                    if (number % 2 != 0) oddCount++;
+                    if (number > 0) posCount++;
                     if (number < 0) negCount++;
                     inputCount++;
                 }
@@ -488,17 +488,18 @@ namespace beecrowdPracticeApp
             void OddNumbers_1067()
             {
                 int n = Convert.ToInt32(Console.ReadLine());
-                if(n >0 && n <= 1000)
+                int oddCount = 0;
+                do
                 {
-                    for (int i = 1; i <= n; i++)
+                    if (n % 2 != 0) 
                     {
-                        if(i%2 != 0)
-                        {
-                            Console.WriteLine(i);
-                        }
+                        Console.WriteLine(n);
+                        oddCount++;
                     }
+                    n++;
 
-                }
+                } while (oddCount<6);
+                
                 Console.ReadLine();
             }
         }
