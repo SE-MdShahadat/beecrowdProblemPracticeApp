@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
 using System.Threading;
@@ -15,19 +16,6 @@ namespace beecrowdPracticeApp
     {
         static void Main(string[] args)
         {
-
-            ConsoleKey input = new ConsoleKey();
-            do
-            {
-                Console.WriteLine("                       Welcome to Practice Pad                       ");
-                Console.WriteLine("                                 *                                   ");
-                OddNumbers_1067();
-                Console.WriteLine("                                 *                                   ");
-                Console.Write("           Press any key to repeat or Exit press [E/e]");
-                input = Console.ReadKey().Key;
-                Console.Write("\n");
-            } while (input != ConsoleKey.E);
-
             void Average3_1040()
             {
                 string inputNumberString1 = Console.ReadLine();
@@ -488,20 +476,71 @@ namespace beecrowdPracticeApp
             void OddNumbers_1067()
             {
                 int n = Convert.ToInt32(Console.ReadLine());
+                if (n > 0 && n <= 1000)
+                {
+                    for (int i = 0; i <= n; i++)
+                    {
+                        if (i % 2 != 0)
+                        {
+                            Console.WriteLine(i);
+                        }
+                    }
+                }
+                Console.ReadLine();
+
+            }
+            void SixOddNumbers_1070()
+            {
+                int n = Convert.ToInt32(Console.ReadLine());
                 int oddCount = 0;
                 do
                 {
-                    if (n % 2 != 0) 
+                    if (n % 2 != 0)
                     {
                         Console.WriteLine(n);
                         oddCount++;
                     }
                     n++;
-
-                } while (oddCount<6);
-                
+                } while (oddCount < 6);
                 Console.ReadLine();
             }
+            void SumofConsecutiveOddNumbersI_1071()
+            {
+                int x = Convert.ToInt32(Console.ReadLine());
+                int y = Convert.ToInt32(Console.ReadLine());
+                int sum = 0;
+                if (x > y)
+                {
+                    int z;
+                    z = x;
+                    x = y;
+                    y = z;
+                }
+
+                for (int i = (x + 1); i < y; i++)
+                {
+                    if (i % 2 != 0)
+                    {
+                        sum += i;
+                    }
+                }
+                Console.WriteLine(sum);
+                Console.ReadLine();
+            }
+            ConsoleKey input = new ConsoleKey();
+            do
+            {
+                Console.WriteLine("                       Welcome to Practice Pad                       ");
+                Console.WriteLine("                                 *                                   ");
+                SumofConsecutiveOddNumbersI_1071();
+                Console.WriteLine("                                 *                                   ");
+                Console.Write("           Press any key to repeat or Exit press [E/e]");
+                input = Console.ReadKey().Key;
+                Console.Write("\n");
+            } while (input != ConsoleKey.E);
+
+            
+            
         }
     }
 }
