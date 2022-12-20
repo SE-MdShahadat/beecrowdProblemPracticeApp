@@ -21,7 +21,7 @@ namespace beecrowdPracticeApp
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                EvenOddPositiveAndNegative_1066();
+                OddNumbers_1067();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
@@ -484,6 +484,22 @@ namespace beecrowdPracticeApp
                 Console.WriteLine($"{posCount} valor(es) positivo(s)");
                 Console.WriteLine($"{negCount} valor(es) negativo(s)");
                 //Console.ReadLine();
+            }
+            void OddNumbers_1067()
+            {
+                int n = Convert.ToInt32(Console.ReadLine());
+                if(n >0 && n <= 1000)
+                {
+                    for (int i = 1; i <= n; i++)
+                    {
+                        if(i%2 != 0)
+                        {
+                            Console.WriteLine(i);
+                        }
+                    }
+
+                }
+                Console.ReadLine();
             }
         }
     }
