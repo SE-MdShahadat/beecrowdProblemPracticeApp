@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization.Formatters;
 using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
@@ -626,10 +627,40 @@ namespace beecrowdPracticeApp
                 int position = 0;
                 for (int i = 0; i < 100; i++)
                 {
-                    if (numbers[i] == maxValue) position = i+1;
+                    if (numbers[i] == maxValue) position = i + 1;
                 }
                 Console.WriteLine($"{maxValue}\n{position}");
                 Console.ReadLine();
+            }
+
+            void Experiments_1094()
+            {
+                int n = Convert.ToInt32(Console.ReadLine());
+                int tC=0, tR=0, tS = 0;
+                for (int i = 0; i < n; i++)
+                {
+                    string[] inputs = Console.ReadLine().Split(' ');
+                    int animalNumber = Convert.ToInt32(inputs[0]);
+                    char animalType =Convert.ToChar(inputs[1]);
+                    if (animalType == 'C') tC += animalNumber;
+                    if (animalType == 'R') tR += animalNumber;
+                    if (animalType == 'S') tS += animalNumber;
+                }
+                double totalAnimal=Convert.ToDouble( tC+tR+tS);
+                double CP , RP , SP ;
+                CP = Convert.ToDouble( tC * 100 / totalAnimal);
+                RP = Convert.ToDouble(tR * 100 / totalAnimal);
+                SP = Convert.ToDouble(tS * 100 / totalAnimal);
+                Console.WriteLine($"Total: {totalAnimal} cobaias");
+                Console.WriteLine($"Total de coelhos: {tC}");
+                Console.WriteLine($"Total de ratos: {tR}");
+                Console.WriteLine($"Total de sapos: {tS}");
+                Console.WriteLine($"Percentual de coelhos: {CP.ToString("0.00")} %");
+                Console.WriteLine($"Percentual de ratos: {RP.ToString("0.00")} %");
+                Console.WriteLine($"Percentual de sapos: {SP.ToString("0.00")} %");
+                Console.ReadLine();
+
+
             }
             //loop Start
             ConsoleKey input = new ConsoleKey();
@@ -637,7 +668,7 @@ namespace beecrowdPracticeApp
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                HighestAndPosition_1080();
+                Experiments_1094();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
