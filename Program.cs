@@ -673,6 +673,20 @@ namespace beecrowdPracticeApp
                 } while (j >=0);
                 Console.ReadKey();
             }
+            void SequenceIJ2_1096()
+            {
+
+                int i = 1, j = 7;
+                do
+                {
+                    for (int x = j; x >= 5; x--)
+                    {
+                        Console.WriteLine($"I={i} J={x}");
+                    }
+                    i+=2; 
+                } while (i <= 9);
+                Console.ReadKey();
+            }
 
             //loop Start
             ConsoleKey input = new ConsoleKey();
@@ -680,7 +694,7 @@ namespace beecrowdPracticeApp
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                SequenceIJ1_1095();
+                SequenceIJ2_1096();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
