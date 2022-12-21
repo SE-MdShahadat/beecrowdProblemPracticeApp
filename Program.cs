@@ -549,17 +549,43 @@ namespace beecrowdPracticeApp
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                EvenSquare_1073();
+                EvenOrOdd_1074();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
                 Console.Write("\n");
             } while (input != ConsoleKey.E);
             //loop end
-
-            
-
-
+            void EvenOrOdd_1074()
+            {
+                int n= Convert.ToInt32(Console.ReadLine());
+                List<int> inputs = new List<int>();
+                int i = 0;
+                while (i<n)
+                {
+                    int x = Convert.ToInt32(Console.ReadLine());
+                    inputs.Add(x);
+                    i++;
+                }
+                foreach (var item in inputs)
+                {
+                    if (item == 0)
+                    {
+                        Console.WriteLine("NULL");
+                    }
+                    else if (item>0)
+                    {
+                        if (item % 2 == 0) Console.WriteLine($"EVEN POSITIVE");
+                        if (item % 2 != 0) Console.WriteLine($"ODD POSITIVE");
+                    }
+                    else
+                    {
+                        if (item % 2 == 0) Console.WriteLine($"EVEN NEGATIVE");
+                        if (item % 2 != 0) Console.WriteLine($"ODD NEGATIVE");
+                    }
+                }
+                //Console.ReadLine();
+            }
 
 
         }
