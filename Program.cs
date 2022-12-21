@@ -542,26 +542,12 @@ namespace beecrowdPracticeApp
                 }
                 Console.ReadLine();
             }
-
-            //loop Start
-            ConsoleKey input = new ConsoleKey();
-            do
-            {
-                Console.WriteLine("                       Welcome to Practice Pad                       ");
-                Console.WriteLine("                                 *                                   ");
-                EvenOrOdd_1074();
-                Console.WriteLine("                                 *                                   ");
-                Console.Write("           Press any key to repeat or Exit press [E/e]");
-                input = Console.ReadKey().Key;
-                Console.Write("\n");
-            } while (input != ConsoleKey.E);
-            //loop end
             void EvenOrOdd_1074()
             {
-                int n= Convert.ToInt32(Console.ReadLine());
+                int n = Convert.ToInt32(Console.ReadLine());
                 List<int> inputs = new List<int>();
                 int i = 0;
-                while (i<n)
+                while (i < n)
                 {
                     int x = Convert.ToInt32(Console.ReadLine());
                     inputs.Add(x);
@@ -573,7 +559,7 @@ namespace beecrowdPracticeApp
                     {
                         Console.WriteLine("NULL");
                     }
-                    else if (item>0)
+                    else if (item > 0)
                     {
                         if (item % 2 == 0) Console.WriteLine($"EVEN POSITIVE");
                         if (item % 2 != 0) Console.WriteLine($"ODD POSITIVE");
@@ -586,6 +572,35 @@ namespace beecrowdPracticeApp
                 }
                 //Console.ReadLine();
             }
+            void Remaining2_1075()
+            {
+                int n = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("2");
+                for (int i = 1; i <= 10000; i++)
+                {
+
+                    if (i % n == 0) Console.WriteLine($"{i + 2}");
+                    if (i + 2 >= 10000) break;
+                }
+                Console.ReadLine();
+            }
+
+            //loop Start
+            ConsoleKey input = new ConsoleKey();
+            do
+            {
+                Console.WriteLine("                       Welcome to Practice Pad                       ");
+                Console.WriteLine("                                 *                                   ");
+                Remaining2_1075();
+                Console.WriteLine("                                 *                                   ");
+                Console.Write("           Press any key to repeat or Exit press [E/e]");
+                input = Console.ReadKey().Key;
+                Console.Write("\n");
+            } while (input != ConsoleKey.E);
+            //loop end
+
+            
+
 
 
         }
