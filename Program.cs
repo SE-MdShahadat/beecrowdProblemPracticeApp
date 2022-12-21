@@ -614,20 +614,37 @@ namespace beecrowdPracticeApp
                 }
                 Console.ReadLine();
             }
+            void HighestAndPosition_1080()
+            {
+                int[] numbers = new int[100];
+                for (int i = 0; i < 100; i++)
+                {
+                    numbers[i] = Convert.ToInt32(Console.ReadLine());
 
+                }
+                int maxValue = numbers.Max();
+                int position = 0;
+                for (int i = 0; i < 100; i++)
+                {
+                    if (numbers[i] == maxValue) position = i+1;
+                }
+                Console.WriteLine($"{maxValue}\n{position}");
+                Console.ReadLine();
+            }
             //loop Start
             ConsoleKey input = new ConsoleKey();
             do
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                WeightedAverages_1079();
+                HighestAndPosition_1080();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
                 Console.Write("\n");
             } while (input != ConsoleKey.E);
             //loop end
+            
             
 
 
