@@ -593,6 +593,27 @@ namespace beecrowdPracticeApp
                 }
                 Console.ReadLine();
             }
+            void WeightedAverages_1079()
+            {
+                int n = Convert.ToInt32(Console.ReadLine());
+                List<double> avgList = new List<double>();
+                int i = 1;
+                while (i <= n)
+                {
+                    string[] strings = Console.ReadLine().Split(' ');
+                    double n1 = Convert.ToDouble(strings[0]);
+                    double n2 = Convert.ToDouble(strings[1]);
+                    double n3 = Convert.ToDouble(strings[2]);
+                    double avg = ((n1 * 2) + (n2 * 3) + (n3 * 5)) / (2 + 3 + 5);
+                    avgList.Add(avg);
+                    i++;
+                }
+                foreach (var item in avgList)
+                {
+                    Console.WriteLine(item.ToString("0.0"));
+                }
+                Console.ReadLine();
+            }
 
             //loop Start
             ConsoleKey input = new ConsoleKey();
@@ -600,7 +621,7 @@ namespace beecrowdPracticeApp
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                MultiplicationTable_1078();
+                WeightedAverages_1079();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
@@ -608,6 +629,7 @@ namespace beecrowdPracticeApp
             } while (input != ConsoleKey.E);
             //loop end
             
+
 
 
 
