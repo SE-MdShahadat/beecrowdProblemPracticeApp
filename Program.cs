@@ -632,7 +632,6 @@ namespace beecrowdPracticeApp
                 Console.WriteLine($"{maxValue}\n{position}");
                 Console.ReadLine();
             }
-
             void Experiments_1094()
             {
                 int n = Convert.ToInt32(Console.ReadLine());
@@ -662,13 +661,26 @@ namespace beecrowdPracticeApp
 
 
             }
+            void SequenceIJ1_1095()
+            {
+                
+                int i = 1, j = 60;
+                do
+                {
+                    Console.WriteLine($"I={i} J={j}");
+                    i += 3;
+                    j -= 5;
+                } while (j >=0);
+                Console.ReadKey();
+            }
+
             //loop Start
             ConsoleKey input = new ConsoleKey();
             do
             {
                 Console.WriteLine("                       Welcome to Practice Pad                       ");
                 Console.WriteLine("                                 *                                   ");
-                Experiments_1094();
+                SequenceIJ1_1095();
                 Console.WriteLine("                                 *                                   ");
                 Console.Write("           Press any key to repeat or Exit press [E/e]");
                 input = Console.ReadKey().Key;
