@@ -15,7 +15,25 @@ namespace beecrowdPracticeApp
         public void Test()
         {
             
-            
+
+        }
+        public void DividingXbyY_1116()
+        {
+            int count = Convert.ToInt32(Console.ReadLine());
+            do
+            {
+                string[] inputText = Console.ReadLine().Split(' ');
+                int m = Convert.ToInt32(inputText[0]);
+                int n = Convert.ToInt32(inputText[1]);
+                if (n != 0)
+                {
+                    double result = (double)m / (double)n;
+                    Console.WriteLine(result.ToString("0.0"));
+                }
+                else Console.WriteLine("divisao impossivel");
+                count--;
+            } while (count > 0);
+            Console.ReadLine();
         }
         public void Quadrant_1115()
         {
