@@ -14,17 +14,21 @@ namespace beecrowdPracticeApp
         //}
         public void Test()
         {
-            bool s=true;
+            
+        }
+        public void FixedPassword_1114()
+        {
+            bool s = true;
             do
             {
                 string password = Console.ReadLine();
-                if(password == "2002")
+                if (password == "2002")
                 {
                     Console.WriteLine("Acesso Permitido");
-                    s=false;
+                    s = false;
                 }
                 else Console.WriteLine("Senha Invalida");
-            } while (s==true);
+            } while (s == true);
         }
         public void AscendingAndDescending_1113()
         {
