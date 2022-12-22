@@ -15,7 +15,36 @@ namespace beecrowdPracticeApp
         public void Test()
         {
             
+        }
+        public void ScoreValidation_1117()
+        {
+            bool close = false;
+            int position = 0;
+            double[] numbers = new double[2];
+            do
+            {
+                double score = Convert.ToDouble(Console.ReadLine());
+                double avg;
 
+                if (score >= 0 && score <= 10)
+                {
+                    numbers[position] = score;
+                    if (position == 1)
+                    {
+                        avg = (numbers[0] + numbers[1]) / 2;
+                        Console.WriteLine("media = " + avg.ToString("0.00"));
+                        close = true;
+                    }
+                    position++;
+                }
+                else
+                {
+                    Console.WriteLine("nota invalida");
+                }
+
+
+            } while (close == false);
+            Console.ReadLine();
         }
         public void DividingXbyY_1116()
         {
