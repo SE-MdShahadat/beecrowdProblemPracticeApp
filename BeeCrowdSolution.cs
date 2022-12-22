@@ -15,6 +15,29 @@ namespace beecrowdPracticeApp
         public void Test()
         {
             
+            
+        }
+        public void Quadrant_1115()
+        {
+            bool status = true;
+            do
+            {
+                string inputNumberString1 = Console.ReadLine();
+                string[] inputNumber = inputNumberString1.Split(' ');
+                int x = int.Parse(inputNumber[0]);
+                int y = int.Parse(inputNumber[1]);
+                if (x == 0 || y == 0)
+                {
+                    status = false;
+                    break;
+                }
+                if (x > 0 && y > 0) Console.WriteLine("primeiro");
+                if (x < 0 && y > 0) Console.WriteLine("segundo");
+                if (x < 0 && y < 0) Console.WriteLine("terceiro");
+                if (x > 0 && y < 0) Console.WriteLine("quarto");
+            } while (status == true);
+            Console.ReadKey();
+
         }
         public void FixedPassword_1114()
         {
