@@ -15,7 +15,28 @@ namespace beecrowdPracticeApp
         public void Test()
         {
             
-            bool c=true;
+        }
+        public void AscendingAndDescending_1113()
+        {
+            bool c = true;
+            do
+            {
+                string[] inputText = Console.ReadLine().Split(' ');
+                int m = Convert.ToInt32(inputText[0]);
+                int n = Convert.ToInt32(inputText[1]);
+                if (m == n)
+                {
+                    break;
+                    c = false;
+                }
+                if (m > n) Console.WriteLine("Decrescente");
+                else Console.WriteLine("Crescente");
+            } while (c);
+            Console.ReadLine();
+        }
+        public void SequenceOfNumbersAndSum_1101()
+        {
+            bool c = true;
             do
             {
                 string[] inputText = Console.ReadLine().Split(' ');
@@ -44,11 +65,7 @@ namespace beecrowdPracticeApp
                 Console.WriteLine(message);
             } while (c);
             Console.ReadLine();
-        }
-        public void SequenceOfNumbersAndSum_1101()
-        {
-            
-            
+
         }
         public void SumofConsecutiveOddNumbersII_1099()
         {
@@ -369,7 +386,7 @@ namespace beecrowdPracticeApp
             }
             Console.ReadKey();
         }
-        void DDD_1050()
+        public void DDD_1050()
         {
             Dictionary<int, string> addressBook = new Dictionary<int, string>()
                 {
