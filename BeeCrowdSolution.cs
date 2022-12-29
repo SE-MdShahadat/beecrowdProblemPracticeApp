@@ -15,6 +15,41 @@ namespace beecrowdPracticeApp
         public void Test()
         {
             
+                
+        }
+        public void SeveralScoresWithValidation_1118()
+        {
+            bool status = true;
+            List<double> numbers = new List<double>();
+            do
+            {
+                double x = Convert.ToDouble(Console.ReadLine());
+                if (x != 1 && x != 2 && x >= 0.00 && x <= 10.00)
+                {
+                    numbers.Add(x);
+                    if (numbers.Count == 2)
+                    {
+                        Console.WriteLine("media = " + numbers.Average().ToString("0.00"));
+                    }
+                    else if (numbers.Count > 2)
+                    {
+                        Console.WriteLine("novo calculo (1-sim 2-nao)");
+                    }
+                }
+                else if (x == 1)
+                {
+                    Console.WriteLine("novo calculo (1-sim 2-nao)");
+                    numbers.Clear();
+                }
+                else if (x == 2)
+                {
+                    Console.WriteLine("novo calculo (1-sim 2-nao)");
+                    status = false;
+                }
+                else Console.WriteLine("nota invalida");
+            } while (status == true) ;
+            Console.ReadLine();
+
         }
         public void ScoreValidation_1117()
         {
