@@ -15,7 +15,53 @@ namespace beecrowdPracticeApp
         public void Test()
         {
             
-                
+        }
+        public void Grenais_1131()
+        {
+            int Inter = 0, Gremio = 0, Empates = 0, Total = 0;
+            int cotinueStatus = 0;
+            do
+            {
+                string[] inputString = Console.ReadLine().Split(' ');
+                int x = Convert.ToInt32(inputString[0]);
+                int y = Convert.ToInt32(inputString[1]);
+                if (x > y)
+                {
+                    Console.WriteLine("Novo grenal (1-sim 2-nao)");
+                    Inter++;
+                }
+                else if (y > x)
+                {
+                    Console.WriteLine("Novo grenal (1-sim 2-nao)");
+                    Gremio++;
+                }
+                else if (x == 0)
+                {
+                    Console.WriteLine("Novo grenal (1-sim 2-nao)");
+                    Empates++;
+                }
+                cotinueStatus = Convert.ToInt32(Console.ReadLine());
+                Total++;
+            } while (cotinueStatus == 1);
+            string winnerTeam = "";
+            if (Inter > Gremio) winnerTeam = "Inter";
+            if (Inter < Gremio) winnerTeam = "Gremio";
+
+            Console.WriteLine(Total + " grenais");
+            Console.WriteLine("Inter:" + Inter);
+            Console.WriteLine("Gremio:" + Gremio);
+            Console.WriteLine("Empates:" + Empates);
+            if (Inter == Gremio)
+            {
+
+                Console.WriteLine("Não houve vencedor");
+            }
+            else
+            {
+                Console.WriteLine(winnerTeam + " venceu mais");
+            }
+            Console.ReadLine();
+
         }
         public void SeveralScoresWithValidation_1118()
         {
