@@ -16,6 +16,22 @@ namespace beecrowdPracticeApp
         {
             
         }
+        public void TypesOfFuel_1134()
+        {
+            int alcohol = 0, gasoline = 0, diesel = 0, input = 0;
+            do
+            {
+                input = Convert.ToInt32(Console.ReadLine());
+                if (input == 1) alcohol++;
+                else if (input == 2) gasoline++;
+                else if (input == 3) diesel++;
+            } while (input != 4);
+            Console.WriteLine("MUITO OBRIGADO");
+            Console.WriteLine("Alcool: " + alcohol);
+            Console.WriteLine("Gasolina: " + gasoline);
+            Console.WriteLine("Diesel: " + diesel);
+            Console.ReadLine();
+        }
         public void RestOfADivision_1133()
         {
             int x = Convert.ToInt32(Console.ReadLine());
