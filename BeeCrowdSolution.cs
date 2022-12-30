@@ -16,6 +16,22 @@ namespace beecrowdPracticeApp
         {
             
         }
+        public void RestOfADivision_1133()
+        {
+            int x = Convert.ToInt32(Console.ReadLine());
+            int y = Convert.ToInt32(Console.ReadLine());
+            if (x > y)
+            {
+                int z = x;
+                x = y;
+                y = z;
+            }
+            for (int i = x + 1; i < y; i++)
+            {
+                if (i % 5 == 2 || i % 5 == 3) Console.WriteLine(i);
+            }
+            Console.ReadLine();
+        }
         public void MultiplesOf13_1132()
         {
             int x = Convert.ToInt32(Console.ReadLine());
