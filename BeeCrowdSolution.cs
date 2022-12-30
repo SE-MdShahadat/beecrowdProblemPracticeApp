@@ -14,6 +14,23 @@ namespace beecrowdPracticeApp
         //}
         public void Test()
         {
+            
+        }
+        public void SquaredAndCubic_1143()
+        {
+            int n = Convert.ToInt32(Console.ReadLine());
+            int i = 1;
+            if (n > 1 && n < 1000)
+            {
+                do
+                {
+                    Console.Write(i + " ");
+                    Console.Write(i * i + " ");
+                    Console.WriteLine(i * i * i);
+                    i++;
+                } while (i <= n);
+            }
+            Console.ReadLine();
         }
         public void PUM_1142()
         {
