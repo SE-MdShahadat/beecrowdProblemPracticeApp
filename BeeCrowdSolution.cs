@@ -14,7 +14,20 @@ namespace beecrowdPracticeApp
         //}
         public void Test()
         {
-            
+        }
+        public void PUM_1142()
+        {
+
+            int n = Convert.ToInt32(Console.ReadLine());
+            int i = 1;
+            do
+            {
+                if (i % 4 != 0) Console.Write(i + " ");
+                else if (i % 4 == 0) Console.WriteLine("PUM");
+                i++;
+
+            } while (i < 1 + n * 4);
+            Console.ReadKey();
         }
         public void TypesOfFuel_1134()
         {
@@ -143,7 +156,7 @@ namespace beecrowdPracticeApp
                     status = false;
                 }
                 else Console.WriteLine("nota invalida");
-            } while (status == true) ;
+            } while (status == true);
             Console.ReadLine();
 
         }
@@ -297,7 +310,7 @@ namespace beecrowdPracticeApp
                     x = y; y = z;
                 }
                 int sum = 0;
-                for (int i = x+1; i < y; i++)
+                for (int i = x + 1; i < y; i++)
                 {
                     if (i % 2 != 0) sum += i;
                 }
