@@ -16,6 +16,25 @@ namespace beecrowdPracticeApp
         {
             
         }
+        public void LogicalSequence_1144()
+        {
+            int n = Convert.ToInt32(Console.ReadLine());
+            if (n > 1 && n < 1000)
+            {
+                for (int i = 1; i <= n; i++)
+                {
+                    Console.Write(i + " ");
+                    Console.Write(i * i + " ");
+                    Console.WriteLine(i * i * i);
+
+                    Console.Write(i + " ");
+                    Console.Write(i * i + 1 + " ");
+                    Console.WriteLine(i * i * i +1);
+                }
+                
+            }
+            Console.ReadLine();
+        }
         public void SquaredAndCubic_1143()
         {
             int n = Convert.ToInt32(Console.ReadLine());
