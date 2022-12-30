@@ -16,6 +16,24 @@ namespace beecrowdPracticeApp
         {
             
         }
+        public void MultiplesOf13_1132()
+        {
+            int x = Convert.ToInt32(Console.ReadLine());
+            int y = Convert.ToInt32(Console.ReadLine());
+            if (x > y)
+            {
+                int z = x;
+                x = y;
+                y = z;
+            }
+            int sum = 0;
+            for (int i = x; i <= y; i++)
+            {
+                if (i % 13 != 0) sum += i;
+            }
+            Console.WriteLine(sum);
+            Console.ReadLine();
+        }
         public void Grenais_1131()
         {
             int Inter = 0, Gremio = 0, Empates = 0, Total = 0;
