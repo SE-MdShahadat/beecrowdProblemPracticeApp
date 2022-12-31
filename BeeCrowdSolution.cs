@@ -14,7 +14,31 @@ namespace beecrowdPracticeApp
         //}
         public void Test()
         {
-            
+
+        }
+        public void LogicalSequence2_1145()
+        {
+            string[] numbers = Console.ReadLine().Split(' ');
+            int x = Convert.ToInt32(numbers[0]);
+            int y = Convert.ToInt32(numbers[1]);
+            if (x < y && x > 1 && x < 20 && y > x && y < 100000)
+            {
+                string message = "";
+                for (int i = 1; i <= y; i++)
+                {
+                    if (i % x != 0)
+                    {
+                        message += i + " ";
+                    }
+                    else
+                    {
+                        message += i;
+                        Console.WriteLine(message);
+                        message = "";
+                    }
+                }
+            }
+            Console.ReadLine();
         }
         public void LogicalSequence_1144()
         {
