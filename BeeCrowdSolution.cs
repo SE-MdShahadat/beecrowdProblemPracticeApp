@@ -14,7 +14,36 @@ namespace beecrowdPracticeApp
         //}
         public void Test()
         {
+            
+        }
+        public void GrowingSequences_1146() 
+        {
+            List<int> list = new List<int>();
+            int n;
+            do
+            {
+                n = Convert.ToInt32(Console.ReadLine());
+                list.Add(n);
+            } while (n != 0);
+            foreach (int item in list)
+            {
+                string message = "";
+                for (int j = 1; j <= item; j++)
+                {
 
+                    if (j % item != 0)
+                    {
+                        message += j + " ";
+                    }
+                    else
+                    {
+                        message += j;
+                        Console.WriteLine(message);
+                        message = "";
+                    }
+                }
+            }
+            Console.ReadLine();
         }
         public void LogicalSequence2_1145()
         {
@@ -53,9 +82,9 @@ namespace beecrowdPracticeApp
 
                     Console.Write(i + " ");
                     Console.Write(i * i + 1 + " ");
-                    Console.WriteLine(i * i * i +1);
+                    Console.WriteLine(i * i * i + 1);
                 }
-                
+
             }
             Console.ReadLine();
         }
