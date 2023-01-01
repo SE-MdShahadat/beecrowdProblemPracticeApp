@@ -16,6 +16,18 @@ namespace beecrowdPracticeApp
         {
             
         }
+        public void SummingConsecutiveIntegers_1149()
+        {
+            var inputs = Console.ReadLine().Split(' ');
+            int x = Convert.ToInt32(inputs.FirstOrDefault());
+            int n= Convert.ToInt32(inputs.LastOrDefault());
+            int sum = 0;
+            for (int i = x; i < x+n; i++)
+            {
+                sum += i;
+            }
+            Console.WriteLine(sum);
+        }
         public void GrowingSequences_1146() 
         {
             List<int> list = new List<int>();
