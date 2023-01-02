@@ -16,6 +16,18 @@ namespace beecrowdPracticeApp
         {
             
         }
+        public void SimpleFactorial_1153()
+        {
+            int n = Convert.ToInt32(Console.ReadLine());
+            int sum = n, count=1;
+            do
+            {
+                sum = sum * (n - count);
+                count++;
+            } while (count<n);
+            Console.WriteLine(sum);
+            Console.ReadLine();
+        }
         public void EasyFibonacci_1151()
         {
             int n = Convert.ToInt32(Console.ReadLine());
