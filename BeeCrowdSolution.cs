@@ -16,6 +16,26 @@ namespace beecrowdPracticeApp
         {
             
         }
+        public void EasyFibonacci_1151()
+        {
+            int n = Convert.ToInt32(Console.ReadLine());
+            int count=2;
+            List<int> numbers=new List<int>();
+            numbers.Add(0);
+            numbers.Add(1);
+            do
+            {
+                numbers.Add(numbers[count - 1] + numbers[count - 2]);
+                count++;
+            } while (count<n);
+            StringBuilder stringBuilder=new StringBuilder();
+            foreach (var item in numbers)
+            {
+                stringBuilder.Append(item +" ");
+            }
+            Console.WriteLine(stringBuilder.ToString().TrimEnd());
+            Console.ReadLine();
+        }
         public void ExceedingZ_1150()
         {
             int x =Convert.ToInt32(Console.ReadLine());
