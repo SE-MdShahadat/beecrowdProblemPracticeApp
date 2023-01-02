@@ -16,6 +16,18 @@ namespace beecrowdPracticeApp
         {
             
         }
+        public void Ages_1154()
+        {
+            List<int> ages = new List<int>();
+            int x = 0;
+            do
+            {
+                x = Convert.ToInt32(Console.ReadLine());
+                if(x >= 0) ages.Add(x);
+            } while (x>=0);
+            Console.WriteLine(ages.Average().ToString("0.00"));
+            Console.ReadLine();
+        }
         public void SimpleFactorial_1153()
         {
             int n = Convert.ToInt32(Console.ReadLine());
