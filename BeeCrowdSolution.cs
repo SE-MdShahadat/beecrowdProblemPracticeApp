@@ -16,6 +16,17 @@ namespace beecrowdPracticeApp
         {
             
         }
+        public void SSequence_1155()
+        {
+            double s = 0;
+            for (int i = 1; i <= 100; i++)
+            {
+                double x=Convert.ToDouble(i);
+                s +=1/ x;
+            }
+            Console.WriteLine(s.ToString("0.00"));
+            Console.ReadLine(); 
+        }
         public void Ages_1154()
         {
             List<int> ages = new List<int>();
