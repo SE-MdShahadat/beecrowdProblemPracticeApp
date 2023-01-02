@@ -14,7 +14,7 @@ namespace beecrowdPracticeApp
         //}
         public void Test()
         {
-            ExceedingZ_1150();
+            
         }
         public void ExceedingZ_1150()
         {
@@ -24,15 +24,17 @@ namespace beecrowdPracticeApp
             {
                 z = Convert.ToInt32(Console.ReadLine());
             } while (x>=z);
-            int count = 0, sum=0;
+            int count = 1, sum=0;
             do
             {
+                
                 sum += x;
                 if(sum>z) break;
                 else count++;
+                x++;
 
             } while (true);
-            Console.WriteLine(count-1);
+            Console.WriteLine(count);
             Console.ReadKey();
         }
         public void SummingConsecutiveIntegers_1149()
